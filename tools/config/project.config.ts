@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { SeedAdvancedConfig } from './seed-advanced.config';
-// import { ExtendPackages } from './seed.config.interfaces';
+import { ExtendPackages } from './seed.config.interfaces';
 
 /**
  * This class extends the basic seed configuration, allowing for project specific overrides. A few examples can be found
@@ -20,7 +20,9 @@ export class ProjectConfig extends SeedAdvancedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-      // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
+      {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
+      {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
+      {src: 'semantic-ui/dist/semantic.min.css', inject: true}
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
@@ -32,13 +34,13 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
     // Add packages (e.g. ng2-translate)
     // ng2-translate is already added with the advanced seed - here for example only
-    // let additionalPackages: ExtendPackages[] = [{
-    //   name: 'ng2-translate',
-    //   // Path to the package's bundle
-    //   path: 'node_modules/ng2-translate/bundles/ng2-translate.umd.js'
-    // }];
-    //
-    // this.addPackagesBundles(additionalPackages);
+    let additionalPackages: ExtendPackages[] = [{
+      name: 'ng-semantic',
+      // Path to the package's bundle
+      path: 'node_modules/ng-semantic/bundles/ng-semantic.js'
+    }];
+    
+    this.addPackagesBundles(additionalPackages);
 
     /* Add to or override NPM module configurations: */
     // this.mergeObject(this.PLUGIN_CONFIGS['browser-sync'], { ghostMode: false });
