@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 // app
 import { RouterExtensions, Config } from '../../core/index';
-import { IAppState, getMenu } from '../../ngrx/index';
+import { IAppState, getMenu, getNames } from '../../ngrx/index';
 import * as navMenu from '../../base/index';
 
 @Component({

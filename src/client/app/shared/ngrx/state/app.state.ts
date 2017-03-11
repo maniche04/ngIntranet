@@ -84,8 +84,8 @@ export function getMultilingualState(state$: Observable<IAppState>): Observable<
 export function getNameListState(state$: Observable<IAppState>): Observable<ISampleState> {
   return state$.select(s => s.sample);
 }
-export function getNavMenuState(state$: Observable<IBaseState>): Observable<IBaseState> {
-  return state$.select(s => s.menu);
+export function getNavMenuState(state$: Observable<IAppState>): Observable<IBaseState> {
+  return state$.select(s => s.base);
 }
 
 export const getLang: any = compose(fromMultilingual.getLang, getMultilingualState);

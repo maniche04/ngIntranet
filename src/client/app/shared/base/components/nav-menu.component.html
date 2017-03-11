@@ -1,1 +1,10 @@
 Test Nav
+{{menu$}}
+<nav>
+  <a *ngFor="let item of (menu$.items | async)">{{item.name}}</a>
+</nav>
+
+<!--[routerLink]="['/']" [routerLinkActive]="['router-link-active']"-->
+
+
+

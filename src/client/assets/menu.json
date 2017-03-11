@@ -1,0 +1,7 @@
+{
+    "type": "primary",
+    "items": [{
+        "name": "home",
+        "icon": "home"}
+    ]
+}
