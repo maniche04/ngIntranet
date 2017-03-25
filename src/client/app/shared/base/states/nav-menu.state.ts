@@ -1,20 +1,17 @@
 import { Observable } from 'rxjs/Observable';
 
 export interface IBaseState {
-    menu: Object;
+  menu: Array<Object>;
 }
 
 export const initialState: IBaseState = {
-    menu: {
-        type: 'primary',
-        items: {
-            name: 'home',
-            icon: 'home'
-        }
-    }
-}
+  menu: [{
+              name: "home",
+              icon: "home"
+          }
+      ]
+};
 
-export function getMenu(state$:
-Observable<IBaseState>) {
-    return state$.select(state => state.menu);
+export function getMenu(state$: Observable<IBaseState>) {
+  return state$.select(state => state.menu);
 }

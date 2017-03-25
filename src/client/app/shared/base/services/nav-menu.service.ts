@@ -27,7 +27,7 @@ export class NavMenuService extends Analytics {
         this.category = CATEGORY;
     }
 
-    getMenu(): Observable<Object> {
+    getMenu(): Observable<Array<Object>> {
         return this.http.get(`${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/menu.json`)
             .map(res => res.json());
     }

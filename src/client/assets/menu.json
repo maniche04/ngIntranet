@@ -1,7 +1,12 @@
-{
-    "type": "primary",
-    "items": [{
-        "name": "home",
-        "icon": "home"}
-    ]
-}
+[
+  {
+    "title" : "Home",
+    "icon" : "home",
+    "url" : "/"
+  },
+  {
+    "title": "About",
+    "icon" : "info",
+    "url" : "/about"
+  }
+] 

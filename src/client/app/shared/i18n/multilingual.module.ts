@@ -8,6 +8,7 @@ import { HttpModule, Http } from '@angular/http';
 // libs
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgSemanticModule } from 'ng-semantic/ng-semantic';
 
 // app
 import { Config } from '../core/index';

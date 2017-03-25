@@ -15,9 +15,8 @@ div {
   font-family: 'Cantarell';
 }
 
-/* Set up a default font and some padding to provide breathing room */
 body {
-  font-size: 16px;
+  padding:20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,22 +45,6 @@ input {
   height: 40px;
   outline: none;
   padding: 8px;
-}
-
-button {
-  background-color: $primary;
-  border-style: none;
-  color: rgba(255, 255, 255, 0.87);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  height: 40px;
-  padding: 8px 18px;
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: $secondary;
 }
 
 /* platform specific */

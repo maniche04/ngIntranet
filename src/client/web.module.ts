@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader } from '@ngx-translate/core';
+import { MaterialModule } from '@angular/material';
 
 // app
 import { APP_COMPONENTS, AppComponent } from './app/components/index';
@@ -70,6 +71,9 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
 @NgModule({
   imports: [
     BrowserModule,
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    }),
     CoreModule.forRoot([
       { provide: WindowService, useFactory: (win) },
       { provide: ConsoleService, useFactory: (cons) }
@@ -83,6 +87,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     }]),
     SampleModule,
     BaseModule,
+    MaterialModule,
     StoreModule.provideStore(AppReducer),
 DEV_IMPORTS,
     EffectsModule.run(MultilingualEffects),

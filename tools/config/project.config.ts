@@ -20,9 +20,10 @@ export class ProjectConfig extends SeedAdvancedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
+      {src: '@angular/material/core/theming/prebuilt/indigo-pink.css', inject: true},
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
-      {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
-      {src: 'semantic-ui/dist/semantic.min.css', inject: true}
+      // {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
+      // {src: 'semantic-ui/dist/semantic.min.css', inject: true}
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
@@ -38,7 +39,19 @@ export class ProjectConfig extends SeedAdvancedConfig {
       name: 'ng-semantic',
       // Path to the package's bundle
       path: 'node_modules/ng-semantic/bundles/ng-semantic.js'
-    }];
+    },
+    // {
+    //   name: '@ng-bootstrap/ng-bootstrap',
+    //   path: 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
+    // },
+    {
+     name:'@angular/material',
+     path:'node_modules/@angular/material/bundles/material.umd.js',
+     packageMeta:{
+       main: 'index.js',
+       defaultExtension: 'js'
+     }
+   }];
     
     this.addPackagesBundles(additionalPackages);
 

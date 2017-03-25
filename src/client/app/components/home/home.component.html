@@ -10,8 +10,10 @@
 </p>
 
 <form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
-  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
+  <md-input-container>
+    <input mdInput [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
+  </md-input-container>
+  <button md-button color="primary" type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
 </form>
 
 <ul>

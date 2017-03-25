@@ -1,10 +1,9 @@
-Test Nav
-{{menu$}}
-<nav>
-  <a *ngFor="let item of (menu$.items | async)">{{item.name}}</a>
-</nav>
-
-<!--[routerLink]="['/']" [routerLinkActive]="['router-link-active']"-->
-
+<md-toolbar color="primary">
+  <span>ngIntranet</span>
+  <button [routerLink] = "menuItem.url" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)" md-button>{{menuItem.title | translate}}</button>
+  <span class="example-spacer"></span>
+  <lang-switcher></lang-switcher>
+</md-toolbar>
 
 
+  

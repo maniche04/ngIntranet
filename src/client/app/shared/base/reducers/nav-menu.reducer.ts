@@ -9,7 +9,7 @@ export function reducer(
         case actions.ActionTypes.INITIALIZED:
             return (<any>Object).assign({},state,{
                 menu: action.payload
-            })
+            });
         
         default:
             return state;

@@ -10,6 +10,11 @@ import { BASE_COMPONENTS } from './components/index';
 import { BASE_PROVIDERS } from './services/index';
 import { MultilingualModule } from '../i18n/multilingual.module';
 
+// libs
+// import { NgSemanticModule } from 'ng-semantic/ng-semantic';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from '@angular/material';
+
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
@@ -21,6 +26,9 @@ import { MultilingualModule } from '../i18n/multilingual.module';
     HttpModule,
     RouterModule,
     MultilingualModule,
+    // NgSemanticModule,
+    MaterialModule,
+    // NgbModule
   ],
   declarations: [
     BASE_COMPONENTS,
