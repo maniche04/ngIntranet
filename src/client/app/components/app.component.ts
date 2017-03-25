@@ -17,11 +17,22 @@ import { Config, LogService, AppService } from '../shared/core/index';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  public appAlert: object;
   constructor(
     public analytics: AnalyticsService,
     public log: LogService,
-    private appService: AppService
+    private appService: AppService,
+
   ) {
+    this.appAlert = {
+
+    }
+    // this.appAlert = {
+    //   type: 'info',
+    //   buttonText: 'Open',
+    //   link: 'www.google.com',
+    //   message: 'Try the new Google Chrome!!'
+    // }
     log.debug(`Config env: ${Config.ENVIRONMENT().ENV}`);
   }
 }
