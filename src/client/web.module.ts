@@ -10,7 +10,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader } from '@ngx-translate/core';
-import { MaterialModule } from '@angular/material';
+// import { MaterialModule } from '@angular/material';
+import { ClarityModule } from 'clarity-angular';
 
 // app
 import { APP_COMPONENTS, AppComponent } from './app/components/index';
@@ -87,7 +88,8 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     }]),
     SampleModule,
     BaseModule,
-    MaterialModule,
+    // MaterialModule,
+    ClarityModule,
     StoreModule.provideStore(AppReducer),
 DEV_IMPORTS,
     EffectsModule.run(MultilingualEffects),

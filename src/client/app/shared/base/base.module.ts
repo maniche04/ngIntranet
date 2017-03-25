@@ -13,7 +13,8 @@ import { MultilingualModule } from '../i18n/multilingual.module';
 // libs
 // import { NgSemanticModule } from 'ng-semantic/ng-semantic';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MaterialModule } from '@angular/material';
+// import { MaterialModule } from '@angular/material';
+import { ClarityModule } from 'clarity-angular';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
@@ -27,8 +28,9 @@ import { MaterialModule } from '@angular/material';
     RouterModule,
     MultilingualModule,
     // NgSemanticModule,
-    MaterialModule,
-    // NgbModule
+    // MaterialModule,
+    // NgbModule,
+    ClarityModule
   ],
   declarations: [
     BASE_COMPONENTS,

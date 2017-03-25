@@ -1,5 +1,11 @@
 <!--<form>-->
-  <select class = 'ui dropdown' [(ngModel)]="lang" (change)="changeLang($event)" name="lang">
-    <option *ngFor="let l of supportedLanguages" [value]="l.code">{{l.title}}</option>
-  </select>
+  <!--<div class='select is-inverted'>
+    <select [(ngModel)]="lang" (change)="changeLang($event)" name="lang">
+      <option *ngFor="let l of supportedLanguages" [value]="l.code">{{l.title}}</option>
+    </select>
+  </div>-->
+
 <!--</form>-->
+<div class="dropdown-menu">
+    <a [ngClass] = "{'active': l.code == lang}" *ngFor="let l of supportedLanguages" (click)="changeLanguage(l.code)" clrDropdownItem>{{l.title}}</a>
+</div>

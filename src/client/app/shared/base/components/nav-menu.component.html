@@ -1,9 +1,64 @@
-<md-toolbar color="primary">
+<!--<div color="primary">
   <span>ngIntranet</span>
-  <button [routerLink] = "menuItem.url" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)" md-button>{{menuItem.title | translate}}</button>
+  <button [routerLink] = "menuItem.url" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">{{menuItem.title | translate}}</button>
   <span class="example-spacer"></span>
   <lang-switcher></lang-switcher>
-</md-toolbar>
+</div>-->
+
+<header class="header-4">
+  <div class="branding">
+      <a href="..." class="nav-link">
+          <clr-icon shape="library" class="is-inverse"></clr-icon>
+          <span class="title">ng Intranet</span>
+      </a>
+  </div>
+  <div class="header-nav">
+      <a href="..." class="nav-link" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
+          <span class="nav-text">{{menuItem.title}}</span>
+      </a>
+  </div>
+  <form class="search">
+      <label for="search_input">
+          <input id="search_input" type="text" placeholder="Search for keywords...">
+      </label>
+  </form>
+  
+  <div class="header-actions">
+
+      <clr-dropdown class="dropdown bottom-right">
+          <button class="nav-icon" clrDropdownToggle>
+              <clr-icon shape="flag"></clr-icon>
+              <clr-icon shape="caret down"></clr-icon>
+          </button>
+          <lang-switcher></lang-switcher>
+      </clr-dropdown>
+      <clr-dropdown class="dropdown bottom-right">
+          <button class="nav-icon" clrDropdownToggle>
+              <clr-icon shape="user"></clr-icon>
+              <clr-icon shape="caret down"></clr-icon>
+          </button>
+          <div class="dropdown-menu">
+              <a href="..." clrDropdownItem>About</a>
+              <a href="..." clrDropdownItem>Preferences</a>
+              <a href="..." clrDropdownItem>Log out</a>
+          </div>
+      </clr-dropdown>
+  </div>
+</header>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Management</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Cloud</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Tenants</a>
+    </li>
+</ul>
 
 
   

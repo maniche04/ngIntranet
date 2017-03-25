@@ -47,4 +47,10 @@ export class LangSwitcherComponent {
     this.log.debug(`Language change: ${lang}`);
     this.store.dispatch(new multilingual.ChangeAction(lang));
   }
+
+  changeLanguage(lang) {
+    this.lang = lang;
+    this.log.debug(`Language change: ${lang}`);
+    this.store.dispatch(new multilingual.ChangeAction(lang));
+  }
 }
