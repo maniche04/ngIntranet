@@ -5,14 +5,14 @@
   <lang-switcher></lang-switcher>
 </div>-->
 
-<header class="header-4">
+<clr-header class="header-4">
   <div class="branding">
       <a href="..." class="nav-link">
           <clr-icon shape="library" class="is-inverse"></clr-icon>
           <span class="title">ng Intranet</span>
       </a>
   </div>
-  <div class="header-nav">
+  <div class="header-nav" [clr-nav-level]="1">
       <a href="..." class="nav-link" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
           <span class="nav-text">{{menuItem.title}}</span>
       </a>
@@ -44,8 +44,8 @@
           </div>
       </clr-dropdown>
   </div>
-</header>
-<ul class="nav">
+</clr-header>
+<ul class="nav" [clr-nav-level]="1">
     <li class="nav-item">
         <a class="nav-link active" href="#">Dashboard</a>
     </li>

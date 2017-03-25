@@ -89,7 +89,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     SampleModule,
     BaseModule,
     // MaterialModule,
-    ClarityModule,
+    ClarityModule.forRoot(),
     StoreModule.provideStore(AppReducer),
 DEV_IMPORTS,
     EffectsModule.run(MultilingualEffects),

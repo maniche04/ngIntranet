@@ -4,7 +4,7 @@
   <router-outlet></router-outlet>
 </div>-->
 
-<div class="main-container" platform>
+<clr-main-container platform>
     <div [hidden]='!appAlert.message'class="alert alert-app-level alert-{{appAlert.type}}">
     <button type="button" class="close" aria-label="Close">
         <clr-icon aria-hidden="true" shape="close"></clr-icon>
@@ -24,4 +24,4 @@
             <router-outlet></router-outlet>
         </div>
     </div>
-</div>
+</clr-main-container>
