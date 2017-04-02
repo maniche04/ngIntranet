@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 // app
 import { AnalyticsService } from '../shared/analytics/index';
 import { Config, LogService, AppService } from '../shared/core/index';
-
+import { Auth } from '../shared/auth/index';
 /**
  * This class represents the main application component.
  */
@@ -17,16 +17,14 @@ import { Config, LogService, AppService } from '../shared/core/index';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  public appAlert: object;
   constructor(
     public analytics: AnalyticsService,
     public log: LogService,
     private appService: AppService,
+    private authService: Auth,
 
   ) {
-    this.appAlert = {
-
-    }
+    
     // this.appAlert = {
     //   type: 'info',
     //   buttonText: 'Open',

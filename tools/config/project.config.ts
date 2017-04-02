@@ -50,6 +50,11 @@ export class ProjectConfig extends SeedAdvancedConfig {
       // Path to the package's bundle
       path: 'node_modules/clarity-angular/clarity-angular.umd.js'
     },
+    {
+      name: 'angular2-jwt',
+      // Path to the package's bundle
+      path: 'node_modules/angular2-jwt/angular2-jwt.js'
+    },
     // {
     //   name: '@ng-bootstrap/ng-bootstrap',
     //   path: 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
@@ -60,7 +65,8 @@ export class ProjectConfig extends SeedAdvancedConfig {
      packageMeta:{
        main: 'index.js',
        defaultExtension: 'js'
-     }
+     },
+     
    }];
     
     this.addPackagesBundles(additionalPackages);

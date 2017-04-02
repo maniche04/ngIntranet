@@ -4,24 +4,4 @@
   <router-outlet></router-outlet>
 </div>-->
 
-<clr-main-container platform>
-    <div [hidden]='!appAlert.message'class="alert alert-app-level alert-{{appAlert.type}}">
-    <button type="button" class="close" aria-label="Close">
-        <clr-icon aria-hidden="true" shape="close"></clr-icon>
-    </button>
-    <div class="alert-item">
-        <div class="alert-text">
-            {{appAlert.message}}
-        </div>
-        <div class="alert-actions">
-            <button class="btn alert-action">{{appAlert.buttonText}}</button>
-        </div>
-    </div>
-    </div>
-    <nav-menu></nav-menu>
-    <div class="content-container">
-        <div class="content-area">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</clr-main-container>
+<router-outlet></router-outlet>

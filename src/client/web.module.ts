@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Http } from '@angular/http';
 
 // libs
@@ -25,6 +26,7 @@ import { MultilingualModule, translateLoaderFactory } from './app/shared/i18n/mu
 import { MultilingualEffects } from './app/shared/i18n/index';
 import { SampleModule } from './app/shared/sample/sample.module';
 import { BaseModule } from './app/shared/base/base.module';
+import { AuthModule } from './app/shared/auth/auth.module';
 import { NameListEffects } from './app/shared/sample/index';
 import { NavMenuEffects } from './app/shared/base/index';
 
@@ -72,6 +74,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     }),
@@ -88,6 +91,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     }]),
     SampleModule,
     BaseModule,
+    AuthModule,
     // MaterialModule,
     ClarityModule.forRoot(),
     StoreModule.provideStore(AppReducer),

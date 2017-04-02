@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 // app
 import { BASE_COMPONENTS } from './components/index';
 import { BASE_PROVIDERS } from './services/index';
+import { AUTH_PROVIDERS } from '../auth/services/index';
 import { MultilingualModule } from '../i18n/multilingual.module';
 
 // libs
@@ -36,7 +37,8 @@ import { ClarityModule } from 'clarity-angular';
     BASE_COMPONENTS,
   ],
   providers: [
-    BASE_PROVIDERS
+    BASE_PROVIDERS,
+    AUTH_PROVIDERS
   ],
   schemas: [
     NO_ERRORS_SCHEMA,

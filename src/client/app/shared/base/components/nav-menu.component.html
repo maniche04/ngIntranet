@@ -7,13 +7,13 @@
 
 <clr-header class="header-4">
   <div class="branding">
-      <a href="..." class="nav-link">
+      <a href="http:\\localhost:5555\home" class="nav-link">
           <clr-icon shape="library" class="is-inverse"></clr-icon>
           <span class="title">ng Intranet</span>
       </a>
   </div>
   <div class="header-nav" [clr-nav-level]="1">
-      <a href="..." class="nav-link" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
+      <a href="#" class="nav-link" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
           <span class="nav-text">{{menuItem.title}}</span>
       </a>
   </div>
@@ -40,7 +40,7 @@
           <div class="dropdown-menu">
               <a href="..." clrDropdownItem>About</a>
               <a href="..." clrDropdownItem>Preferences</a>
-              <a href="..." clrDropdownItem>Log out</a>
+              <a (click) = 'doLogOut()' clrDropdownItem>Log out</a>
           </div>
       </clr-dropdown>
   </div>
