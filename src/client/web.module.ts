@@ -11,8 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader } from '@ngx-translate/core';
-// import { MaterialModule } from '@angular/material';
-import { ClarityModule } from 'clarity-angular';
+import { MaterialModule } from '@angular/material';
 
 // app
 import { APP_COMPONENTS, AppComponent } from './app/components/index';
@@ -93,7 +92,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     BaseModule,
     AuthModule,
     // MaterialModule,
-    ClarityModule.forRoot(),
+    MaterialModule.forRoot(),
     StoreModule.provideStore(AppReducer),
 DEV_IMPORTS,
     EffectsModule.run(MultilingualEffects),

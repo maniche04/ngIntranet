@@ -4,7 +4,7 @@
     <button type="submit">Submit</button>    
 </form>-->
 
-<div class="login-wrapper">
+<!--<div class="login-wrapper">
     <form class="login">
         <label class="title">
             <clr-icon shape="library" class="is-solid" size="24"></clr-icon><br>
@@ -33,4 +33,39 @@
             <button (click) = 'doLogin()' type="submit" class="btn btn-primary">LOG IN</button>
         </div>
     </form>
+</div>-->
+
+<div fxLayout
+        fxLayout.xs="column"
+        fxLayoutAlign="center center" style="min-height:700px">
+  <div
+      fxFlexAlign="center center" fxFlex fxFlexOffset="10px" fxFlexOffset.xs = '5px' fxFlex="40%">
+      <div fxLayout fxLayoutAlign="center">
+                   <h2><md-icon>home</md-icon><br>Intranet Portal</h2>
+        </div>
+        <br>
+        <md-card class = 'login-card' >
+            <md-card-title>Login</md-card-title>
+            <md-card-subtitle>Provide your domain credentials!</md-card-subtitle>
+            <br>
+            <md-card-content>
+                <md-input-container>
+                        <input mdInput placeholder="Username">
+                </md-input-container>
+                <br>
+                <md-input-container>
+                        <input mdInput placeholder="Password">
+                </md-input-container>
+            </md-card-content>
+            <md-card-actions >
+                <button md-button>LOGIN</button>
+            </md-card-actions>
+        </md-card>
+  </div>
+  <div fxFlexOffset="50px" fxFlex fxHide.xs fxHide.md fxHide.sm>
+    TESTER
+  </div>
 </div>
+
+
+

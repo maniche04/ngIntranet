@@ -21,14 +21,8 @@ export class ProjectConfig extends SeedAdvancedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-      // {src: '@angular/material/core/theming/prebuilt/indigo-pink.css', inject: true},
+      {src: '@angular/material/core/theming/prebuilt/deeppurple-amber.css', inject: true},
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
-      {src: '@webcomponents/custom-elements/custom-elements.min.js', inject: 'libs'},
-      {src: 'clarity-icons/clarity-icons.min.js', inject: 'libs'},
-      // {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
-      // {src: 'semantic-ui/dist/semantic.min.css', inject: true}
-      {src: 'clarity-icons/clarity-icons.min.css', inject: true},
-      {src: 'clarity-ui/clarity-ui.min.css', inject: true}
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
@@ -40,33 +34,31 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
     // Add packages (e.g. ng2-translate)
     // ng2-translate is already added with the advanced seed - here for example only
-    let additionalPackages: ExtendPackages[] = [{
-      name: 'ng-semantic',
-      // Path to the package's bundle
-      path: 'node_modules/ng-semantic/bundles/ng-semantic.js'
-    },
-    {
-      name: 'clarity-angular',
-      // Path to the package's bundle
-      path: 'node_modules/clarity-angular/clarity-angular.umd.js'
-    },
+    let additionalPackages: ExtendPackages[] = [
+    //   {
+    //   name: 'ng-semantic',
+    //   // Path to the package's bundle
+    //   path: 'node_modules/ng-semantic/bundles/ng-semantic.js'
+    // },
     {
       name: 'angular2-jwt',
       // Path to the package's bundle
       path: 'node_modules/angular2-jwt/angular2-jwt.js'
     },
-    // {
-    //   name: '@ng-bootstrap/ng-bootstrap',
-    //   path: 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
-    // },
     {
      name:'@angular/material',
      path:'node_modules/@angular/material/bundles/material.umd.js',
      packageMeta:{
        main: 'index.js',
        defaultExtension: 'js'
-     },
-     
+     }},
+     {
+       name: '@angular/flex-layout',
+       path: 'node_modules/@angular/flex-layout/bundles/flex-layout.umd.js',
+       packageMeta:{
+       main: 'index.js',
+       defaultExtension: 'js'
+     }
    }];
     
     this.addPackagesBundles(additionalPackages);

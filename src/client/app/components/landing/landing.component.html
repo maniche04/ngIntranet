@@ -1,4 +1,4 @@
-<clr-main-container platform>
+<!--<clr-main-container platform>
     <div [hidden]='!appAlert.message'class="alert alert-app-level alert-{{appAlert.type}}">
     <button type="button" class="close" aria-label="Close">
         <clr-icon aria-hidden="true" shape="close"></clr-icon>
@@ -18,4 +18,38 @@
             <router-outlet></router-outlet>
         </div>
     </div>
-</clr-main-container>
+</clr-main-container>-->
+
+<div class = 'font-override'>
+  <md-toolbar color="primary">
+   <span>ngIntranet</span>
+    <span class="example-spacer"></span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+  </md-menu>
+
+  <md-card>
+    <button md-button>All</button>
+    <button md-raised-button>Of</button>
+    <button md-raised-button color="primary">The</button>
+    <button md-raised-button color="accent">Buttons</button>
+  </md-card>
+
+  <router-outlet></router-outlet>
+</div>

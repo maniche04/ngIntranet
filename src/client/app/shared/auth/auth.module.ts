@@ -11,7 +11,9 @@ import { HttpModule } from '@angular/http';
 
 import { AUTH_PROVIDERS } from './services/index';
 import { AUTH_COMPONENTS } from './components/index';
-import { ClarityModule } from 'clarity-angular';
+// import { ClarityModule } from 'clarity-angular';
+import { MaterialModule } from '@angular/material' ;
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig(), http, options);
@@ -24,7 +26,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         FormsModule,
         RouterModule,
         HttpModule,
-        ClarityModule
+        MaterialModule,
+        FlexLayoutModule
         
     ],
     declarations: [

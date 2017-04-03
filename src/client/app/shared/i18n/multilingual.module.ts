@@ -9,7 +9,7 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // import { NgSemanticModule } from 'ng-semantic/ng-semantic';
-import { ClarityModule } from 'clarity-angular';
+import { MaterialModule } from '@angular/material';
 
 // app
 import { Config } from '../core/index';
@@ -33,7 +33,7 @@ export function translateLoaderFactory(http: Http) {
     RouterModule,
     FormsModule,
     HttpModule,
-    ClarityModule,
+    MaterialModule,
     TranslateModule.forRoot([{
       provide: TranslateLoader,
       deps: [Http],
