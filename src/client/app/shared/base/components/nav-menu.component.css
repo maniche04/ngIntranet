@@ -12,4 +12,9 @@
 
 .nav-links {
   font-size:0.8em;
+  margin:3px;
+}
+
+.fill-space {
+  flex: 1 1 auto;
 }

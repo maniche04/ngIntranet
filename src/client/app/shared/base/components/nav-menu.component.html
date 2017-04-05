@@ -6,28 +6,30 @@
 </div>-->
 
 <div class = 'font-override'>
-  <md-toolbar color="primary" (color) = 'primary' fxLayout >
-   <button md-button fxFlexOffset='5px' href="#" class="nav-links" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
+  <md-toolbar color="primary" >
+   <button md-button href="#" class="nav-links" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
           <span class="nav-text"><strong>{{menuItem.title}}</strong></span>
       </button>
+    <span class='fill-space'></span>
     <button md-icon-button [md-menu-trigger-for]="menu">
       <md-icon>more_vert</md-icon>
     </button>
-  </md-toolbar>
-  <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>
-        <md-icon>fingerprint</md-icon>
-        <span>Login</span>
-      </button>
-      <button md-menu-item disabled>
+
+  <md-menu x-position="before" #menu="mdMenu" >
+          <!--<button md-menu-item disabled>
         <md-icon>announcement</md-icon>
         <span>Issues</span>
-      </button>
+      </button>-->
       <button md-menu-item>
         <md-icon>notifications_off</md-icon>
         <span>Disable alerts</span>
       </button>
-  </md-menu>
+    <button md-menu-item (click) = 'doLogOut()'>
+        <md-icon>close</md-icon>
+        <span>Logout</span>
+      </button>
 
+  </md-menu>
+  </md-toolbar>
 </div>
 
