@@ -35,37 +35,49 @@
     </form>
 </div>-->
 
-<div fxLayout
-        fxLayout.xs="column"
-        fxLayoutAlign="center center" style="min-height:700px">
+
+<div id = 'loginContainer' fxLayout
+
+        fxLayoutAlign="center center" style="position: absolute;
+       top: 0px; /* Header Height */
+       bottom: 0px; /* Footer Height */
+       width: 100%;">
   <div
-      fxFlexAlign="center center" fxFlex fxFlexOffset="10px" fxFlexOffset.xs = '5px' fxFlex="40%">
-      <div fxLayout fxLayoutAlign="center">
-                   <h2><md-icon>home</md-icon><br>Intranet Portal</h2>
+      fxFlexAlign ="center center" fxFlex fxFlexOffset="5px" fxFlexOffset.xs='5px' fxFlex.xs='80%' fxFlex="40%">
+      <div id = 'loginTitle' fxLayout fxLayout='column' fxLayoutAlign="center center">
+          <md-icon>forum</md-icon>
+                   <h2>INTRANET PORTAL</h2>
         </div>
-        <br>
         <md-card class = 'login-card' >
             <md-card-title>Login</md-card-title>
-            <md-card-subtitle>Provide your domain credentials!</md-card-subtitle>
+            <md-card-subtitle>Please provide your domain credentials!</md-card-subtitle>
             <br>
             <md-card-content>
                 <md-input-container>
-                        <input mdInput placeholder="Username">
+                        <input mdInput [(ngModel)] = 'credentials.username' placeholder="Username">
                 </md-input-container>
                 <br>
                 <md-input-container>
-                        <input mdInput placeholder="Password">
+                        <input mdInput [(ngModel)] = 'credentials.password' type="password" placeholder="Password">
                 </md-input-container>
+                <div class="error active" *ngIf = "isError == 1">
+                    Invalid user name or password!
+                </div>
             </md-card-content>
             <md-card-actions >
-                <button md-button>LOGIN</button>
+                <button md-button type='submit' (click) = 'doLogin()'>LOGIN</button>
             </md-card-actions>
         </md-card>
+              <div fxLayout fxLayout='column' fxLayoutAlign="center center">
+                  <br>
+                  Jizan Perfumes LLC<br>
+            <span>2017</span>
+        </div>
   </div>
-  <div fxFlexOffset="50px" fxFlex fxHide.xs fxHide.md fxHide.sm>
-    TESTER
-  </div>
+
 </div>
+
+
 
 
 

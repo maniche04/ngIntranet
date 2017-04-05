@@ -20,36 +20,5 @@
     </div>
 </clr-main-container>-->
 
-<div class = 'font-override'>
-  <md-toolbar color="primary">
-   <span>ngIntranet</span>
-    <span class="example-spacer"></span>
-
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
-  </md-toolbar>
-  <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>
-        <md-icon>fingerprint</md-icon>
-        <span>Login</span>
-      </button>
-      <button md-menu-item disabled>
-        <md-icon>announcement</md-icon>
-        <span>Issues</span>
-      </button>
-      <button md-menu-item>
-        <md-icon>notifications_off</md-icon>
-        <span>Disable alerts</span>
-      </button>
-  </md-menu>
-
-  <md-card>
-    <button md-button>All</button>
-    <button md-raised-button>Of</button>
-    <button md-raised-button color="primary">The</button>
-    <button md-raised-button color="accent">Buttons</button>
-  </md-card>
-
-  <router-outlet></router-outlet>
-</div>
+<nav-menu></nav-menu>
+<router-outlet></router-outlet>

@@ -5,58 +5,29 @@
   <lang-switcher></lang-switcher>
 </div>-->
 
-<clr-header class="header-4">
-  <div class="branding">
-      <a href="http:\\localhost:5555\home" class="nav-link">
-          <clr-icon shape="library" class="is-inverse"></clr-icon>
-          <span class="title">ng Intranet</span>
-      </a>
-  </div>
-  <div class="header-nav" [clr-nav-level]="1">
-      <a href="#" class="nav-link" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
-          <span class="nav-text">{{menuItem.title}}</span>
-      </a>
-  </div>
-  <form class="search">
-      <label for="search_input">
-          <input id="search_input" type="text" placeholder="Search for keywords...">
-      </label>
-  </form>
-  
-  <div class="header-actions">
+<div class = 'font-override'>
+  <md-toolbar color="primary" (color) = 'primary' fxLayout >
+   <button md-button fxFlexOffset='5px' href="#" class="nav-links" [routerLink] = "menuItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngFor="let menuItem of (menu$ | async)">
+          <span class="nav-text"><strong>{{menuItem.title}}</strong></span>
+      </button>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+  </md-menu>
 
-      <clr-dropdown class="dropdown bottom-right">
-          <button class="nav-icon" clrDropdownToggle>
-              <clr-icon shape="flag"></clr-icon>
-              <clr-icon shape="caret down"></clr-icon>
-          </button>
-          <lang-switcher></lang-switcher>
-      </clr-dropdown>
-      <clr-dropdown class="dropdown bottom-right">
-          <button class="nav-icon" clrDropdownToggle>
-              <clr-icon shape="user"></clr-icon>
-              <clr-icon shape="caret down"></clr-icon>
-          </button>
-          <div class="dropdown-menu">
-              <a href="..." clrDropdownItem>About</a>
-              <a href="..." clrDropdownItem>Preferences</a>
-              <a (click) = 'doLogOut()' clrDropdownItem>Log out</a>
-          </div>
-      </clr-dropdown>
-  </div>
-</clr-header>
-<ul class="nav" [clr-nav-level]="1">
-    <li class="nav-item">
-        <a class="nav-link active" href="#">Dashboard</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Management</a>
-    </li>
-<li class="nav-item">
-        <a class="nav-link" href="#">Cloud</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Tenants</a>
-    </li>
-</ul>
+</div>
 

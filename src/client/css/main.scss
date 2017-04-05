@@ -1,4 +1,8 @@
+
+
 @import '../scss/variables';
+
+$mat-font-family: 'PT Sans',sans-serif;
 
 /* Reset */
 html,
@@ -12,7 +16,7 @@ div {
 /* Box-sizing border-box */
 * {
   box-sizing: border-box;
-  font-family: 'Cantarell';
+  font-family: $mat-font-family;
 }
 
 body {
@@ -81,7 +85,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
  * Override default material design fonts ($mat-font-family)
  */
 
-$mat-font-family: 'Cantarell',sans-serif;
+
 
 // .font-override { // body or wrapper class
   .mat-button-toggle,
@@ -112,9 +116,9 @@ $mat-font-family: 'Cantarell',sans-serif;
 // }
 
 button.mat-menu-item {
-  font-family: 'Cantarell';
+  font-family: $mat-font-family;
 }
 
 .mat-card {
-  font-family: 'Cantarell';
+  font-family: $mat-font-family;
 }

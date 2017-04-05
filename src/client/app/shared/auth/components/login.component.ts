@@ -7,6 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RouterExtensions, Config } from '../../core/index';
 import * as auth from '../../base/index';
 import { Auth } from '../services/auth.service';
+import {MdSnackBar} from '@angular/material';
 
 @Component({
     moduleId: module.id,
@@ -26,7 +27,8 @@ export class LoginComponent {
         private authService: Auth, 
         public routertext: RouterExtensions,
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        public snackBar: MdSnackBar
     ) {
         this.isError = 0;
         
@@ -39,9 +41,16 @@ export class LoginComponent {
                 this.router.navigate(['home']);
             },
             error => {
-                this.isError = 1;
+                this.openSnackBar('Invalid username or password!','');
+                // this.isError = 1;
                 this.credentials.password = '';
             });
     }
+
+    openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
 
 }

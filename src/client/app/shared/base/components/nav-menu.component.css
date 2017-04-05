@@ -5,3 +5,11 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.active {
+  background-color: darkcyan;
+}
+
+.nav-links {
+  font-size:0.8em;
+}

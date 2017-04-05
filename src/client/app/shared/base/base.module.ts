@@ -10,6 +10,7 @@ import { BASE_COMPONENTS } from './components/index';
 import { BASE_PROVIDERS } from './services/index';
 import { AUTH_PROVIDERS } from '../auth/services/index';
 import { MultilingualModule } from '../i18n/multilingual.module';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 // libs
 // import { NgSemanticModule } from 'ng-semantic/ng-semantic';
@@ -29,7 +30,7 @@ import { MaterialModule } from '@angular/material';
     MultilingualModule,
     // NgSemanticModule,
     MaterialModule,
-    // NgbModule,
+    FlexLayoutModule
   ],
   declarations: [
     BASE_COMPONENTS,
